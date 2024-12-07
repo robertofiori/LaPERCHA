@@ -2,13 +2,39 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #f8f9fa;
   }
+
+  nav {
+    margin-bottom: 0px; /* Reduce el espacio debajo de la navbar */
+}
+
+video {
+  margin-top: 0; /* Elimina el espacio superior del video */
+}
   
   .navbar {
     display: flex;
     align-items: center;
-    padding: 10px 20px; /* Ajusta el padding para que la navbar sea más compacta */
+    padding: 0px 20px; /* Ajusta el padding para que la navbar sea más compacta */
   }
+
+  @media (max-width: 768px) {
+    .navbar {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .navbar-brand {
+        margin-right: auto;
+    }
+}
   
+  .navbar-brand img {
+    max-width: 400px; /* Ajusta este valor según lo necesario */
+    max-height: 200px;
+    margin: 0;
+    padding: 0;
+}
+
   .navbar img {
     margin-right: 1px; /* Elimina o reduce el espacio entre el logo y la navbar */
   }
@@ -32,6 +58,8 @@ body {
   .video-container video {
     width: 100%;
     height: auto;
+    border-radius: 30px; /* Ajusta el valor para redondear los bordes */
+    overflow: hidden; /* Asegura que los bordes se apliquen correctamente */
   }
   
   .video-container h1 {
@@ -40,7 +68,19 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white; /* Cambia el color según el contraste con el video */
-    font-size: 3rem; /* Ajusta el tamaño según sea necesario */
+    font-size: 2rem; /* Ajusta el tamaño según sea necesario */
+    text-align: center;
+  }
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 10rem; /* Tamaño para tablets y pantallas medianas */
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    h1 {
+      font-size: 4rem; /* Tamaño para pantallas grandes */
+    }
   }
   
   #productos {
