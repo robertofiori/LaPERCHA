@@ -54,6 +54,43 @@ video {
   .video-container {
     position: relative;
   }
+
+  .carousel-inner {
+    border-radius: 15px; /* Ajusta el valor según el nivel de redondeo deseado */
+    overflow: hidden;    /* Asegura que el contenido no se desborde del borde redondeado */
+  }
+  
+  @media (max-width: 768px) {
+    .carousel-inner {
+      border-radius: 10px; /* Bordes más pequeños para pantallas pequeñas */
+    }
+  }
+  
+  .carousel-inner {
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  
+  .carousel-item {
+    transition: transform 0.6s ease-in-out; /* Ajusta el tiempo y el tipo de transición */
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    transition: opacity 0.3s ease-in-out; /* Suaviza los íconos de navegación */
+  }
+  
+  .carousel-control-prev-icon:hover,
+  .carousel-control-next-icon:hover {
+    opacity: 0.7; /* Cambia la opacidad al hacer hover */
+  }
+  
+  .carousel-item video {
+    border-radius: 15px; /* Bordes redondeados */
+    object-fit: cover;   /* Asegura que el video se ajuste correctamente */
+    height: 100%;        /* Asegura que el video llene la diapositiva */
+  }
+  
   
   .video-container video {
     width: 100%;
