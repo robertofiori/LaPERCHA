@@ -1,49 +1,94 @@
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
-    text-align: center;
-    padding: 20px;
-  }
-  
-  header h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-  
-  #carrito-items {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
-  }
-  
-  .carrito-item {
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
-  
-  .carrito-total {
-    margin-top: 20px;
-    text-align: center;
-  }
-  
-  
-  button {
-    padding: 10px 15px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+#carrito-contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin: auto;
+}
+
+#carrito-items {
+  display: flex;
+  flex-direction: column; /* Alineación vertical */
+  gap: 20px; /* Espacio entre ítems */
+  width: 100%;
+  max-width: 600px; /* Ancho máximo del contenedor */
+  margin-bottom: 20px;
+}
+
+.carrito-item {
+  display: flex;
+  justify-content: space-between; /* Distribuye contenido horizontalmente */
+  align-items: center;
+  background-color: white;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.carrito-item img {
+  max-width: 80px; /* Tamaño limitado para imágenes */
+  height: auto;
+  border-radius: 5px;
+}
+
+.carrito-item .info {
+  flex-grow: 1;
+  margin-left: 15px;
+  text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.carrito-item .acciones {
+  display: flex;
+  flex-direction: column; /* Botones en una columna */
+  gap: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#carrito-total {
+  text-align: center;
+}
+
+#carrito-total h3 {
+  margin-bottom: 15px;
+}
+
+#carrito-total button {
+  padding: 10px 20px;
+  font-size: 1rem;
+}
+
